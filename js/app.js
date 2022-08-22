@@ -20,7 +20,7 @@ function addPlayerInDom(player, count) {
 }
 
 // disabled button 
-const buttons = document.getElementsByTagName('button')
+const buttons = document.querySelectorAll('section button')
 let disabledBtnCount = 1
 for (const button of buttons) {
     button.addEventListener('click', function dis(name) {     
