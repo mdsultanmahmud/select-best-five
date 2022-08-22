@@ -65,11 +65,19 @@ function budgetCalculate() {
         alert('You have to add minimum one player')
     } else {
         const costPerPlayer = getValueFromInput('expenses-field')
-        // calculate cost per player and display 
-        const playerExpenses = players.length * costPerPlayer
-        displayCost('player-expenses', playerExpenses)
-        return playerExpenses
+        if (isNaN(costPerPlayer)) {
+            alert('Please Enter Valid Information')
+        } else {
+            // calculate cost per player and display 
+            const playerExpenses = players.length * costPerPlayer
+            displayCost('player-expenses', playerExpenses)
+            return playerExpenses
+        }
+
     }
+
+
+
 
 
 }
