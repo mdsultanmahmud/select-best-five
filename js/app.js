@@ -18,6 +18,7 @@ for (const button of buttons) {
     button.addEventListener('click', function () {
         if (disabledBtnCount <= 5) {
             button.disabled = true
+            button.style.backgroundColor = 'grey'
         }
         disabledBtnCount++
     })
