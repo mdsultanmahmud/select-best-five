@@ -65,8 +65,8 @@ function budgetCalculate() {
         alert('You have to add minimum one player')
     } else {
         const costPerPlayer = getValueFromInput('expenses-field')
-        if (isNaN(costPerPlayer)) {
-            alert('Please Enter Valid Information')
+        if (isNaN(costPerPlayer) || costPerPlayer < 0) {
+            alert('Enter Per Player Expenses(positive number)!!')
         } else {
             // calculate cost per player and display 
             const playerExpenses = players.length * costPerPlayer
@@ -92,7 +92,12 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     const playerExpenses = budgetCalculate()
     const managerCost = getValueFromInput('manager-field')
     const coachCost = getValueFromInput('coach-field')
-    // calculate and display total cost 
-    const totalCost = playerExpenses + managerCost + coachCost
-    displayCost('total-expenses', totalCost)
+    if (isNaN(managerCost) || managerCost < 0 || isNaN(coachCost) || coachCost < 0) {
+        alert('Please Add Cost for manager and coach!!')
+    } else {
+        // calculate and display total cost 
+        const totalCost = playerExpenses + managerCost + coachCost
+        displayCost('total-expenses', totalCost)
+    }
+
 })
