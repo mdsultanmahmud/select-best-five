@@ -93,7 +93,7 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     const managerCost = getValueFromInput('manager-field')
     const coachCost = getValueFromInput('coach-field')
     if (isNaN(managerCost) || managerCost < 0 || isNaN(coachCost) || coachCost < 0) {
-        alert('Please Add Cost for manager and coach!!')
+        alert('Please Add Cost for manager and coach(positive number)!!')
     } else {
         // calculate and display total cost 
         const totalCost = playerExpenses + managerCost + coachCost
