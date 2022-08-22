@@ -121,10 +121,10 @@
 
           <input type="text" class="form-control bg-dark text-danger" id="expenses-field"
             placeholder="Expenses Per Player">
-          <button class="btn btn-success d-block w-100 text-center text-uppercase my-3">calculate</button>
+          <button id="calculate" class="btn btn-success d-block w-100 text-center text-uppercase my-3">calculate</button>
           <div class="d-flex justify-content-around">
             <p class="fw-semibold">Player Expenses:</p>
-            <p class="fw-bold">$<span id="total-expenses">1250</span></p>
+            <p class="fw-bold">$<span id="player-expenses">1250</span></p>
           </div>
           <div class="mb-3 row ">
             <label for="manager-field" class="col-sm-4 col-form-label ">Manager</label>
@@ -138,7 +138,7 @@
               <input type="text" class="form-control bg-dark text-white" id="coach-field">
             </div>
           </div>
-          <button class="btn btn-info d-block w-100 text-center text-uppercase my-3">calculate Total</button>
+          <button id="calculate-total" class="btn btn-info d-block w-100 text-center text-uppercase my-3">calculate Total</button>
           <div class="d-flex justify-content-around">
             <p class="fw-semibold">Total:</p>
             <p class="fw-bold">$<span id="total-expenses">1250</span></p>
